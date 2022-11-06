@@ -1,8 +1,13 @@
 # Initial Data Migration From DynamoDB to Aurora/MySQL
 ## Backgroud
-
+Customer wants to migrate data from DynamoDB to Aurora MySQL. This project will provide guidance on how to set up a glue job to load data into MySQL destination.
 
 ## Architecture
+
+- Export DynamoDB table to S3
+- Use Glue Crawler to crawl data and generate Glue table
+- Perform mappings logic in Glue job
+- Export data to MySQL using a Glue Connections
 
 ![Architecture Diagram](img/Architecture Diagram.png)
 
@@ -20,6 +25,7 @@
 ![Connection_1](img/Connection_1.png)
 ![Connection_2](img/Connection_2.png)
 ![Connection_3](img/Connection_3.png)
+5. Create VPC Endpoint for Glue to connect to the 
 
 ### C. Create Glue Job
 1. Download ETL script
